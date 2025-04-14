@@ -1,0 +1,1080 @@
+{
+  "byState": [
+    {
+      "state": "MN",
+      "count": 22,
+      "affected": 191098754
+    },
+    {
+      "state": "CA",
+      "count": 41,
+      "affected": 17475266
+    },
+    {
+      "state": "TN",
+      "count": 30,
+      "affected": 16130300
+    },
+    {
+      "state": "TX",
+      "count": 64,
+      "affected": 14430370
+    },
+    {
+      "state": "NY",
+      "count": 61,
+      "affected": 9245485
+    },
+    {
+      "state": "MO",
+      "count": 14,
+      "affected": 8740369
+    },
+    {
+      "state": "FL",
+      "count": 38,
+      "affected": 7405479
+    },
+    {
+      "state": "NJ",
+      "count": 23,
+      "affected": 4892106
+    },
+    {
+      "state": "UT",
+      "count": 3,
+      "affected": 4303676
+    },
+    {
+      "state": "IL",
+      "count": 48,
+      "affected": 3906456
+    },
+    {
+      "state": "OH",
+      "count": 51,
+      "affected": 3700134
+    },
+    {
+      "state": "PA",
+      "count": 37,
+      "affected": 3650412
+    },
+    {
+      "state": "MA",
+      "count": 27,
+      "affected": 3386734
+    },
+    {
+      "state": "NE",
+      "count": 11,
+      "affected": 3283348
+    },
+    {
+      "state": "LA",
+      "count": 5,
+      "affected": 2938306
+    },
+    {
+      "state": "MI",
+      "count": 32,
+      "affected": 2910866
+    },
+    {
+      "state": "CO",
+      "count": 10,
+      "affected": 2767518
+    },
+    {
+      "state": "OK",
+      "count": 11,
+      "affected": 2753848
+    },
+    {
+      "state": "IN",
+      "count": 30,
+      "affected": 2393628
+    },
+    {
+      "state": "WA",
+      "count": 11,
+      "affected": 1885896
+    },
+    {
+      "state": "GA",
+      "count": 22,
+      "affected": 1804020
+    },
+    {
+      "state": "IA",
+      "count": 12,
+      "affected": 1683251
+    },
+    {
+      "state": "AL",
+      "count": 17,
+      "affected": 1616684
+    },
+    {
+      "state": "CT",
+      "count": 15,
+      "affected": 1481796
+    },
+    {
+      "state": "NC",
+      "count": 27,
+      "affected": 1479327
+    },
+    {
+      "state": "DE",
+      "count": 4,
+      "affected": 954897
+    },
+    {
+      "state": "WI",
+      "count": 15,
+      "affected": 830358
+    },
+    {
+      "state": "MD",
+      "count": 13,
+      "affected": 519790
+    },
+    {
+      "state": "KS",
+      "count": 16,
+      "affected": 506592
+    },
+    {
+      "state": "MS",
+      "count": 10,
+      "affected": 500816
+    },
+    {
+      "state": "ID",
+      "count": 3,
+      "affected": 469847
+    },
+    {
+      "state": "VA",
+      "count": 11,
+      "affected": 310664
+    },
+    {
+      "state": "AZ",
+      "count": 11,
+      "affected": 244523
+    },
+    {
+      "state": "RI",
+      "count": 3,
+      "affected": 156402
+    },
+    {
+      "state": "HI",
+      "count": 3,
+      "affected": 155493
+    },
+    {
+      "state": "SC",
+      "count": 5,
+      "affected": 94250
+    },
+    {
+      "state": "NH",
+      "count": 4,
+      "affected": 93290
+    },
+    {
+      "state": "ME",
+      "count": 6,
+      "affected": 91333
+    },
+    {
+      "state": "WV",
+      "count": 2,
+      "affected": 76426
+    },
+    {
+      "state": "AR",
+      "count": 9,
+      "affected": 71123
+    },
+    {
+      "state": "ND",
+      "count": 3,
+      "affected": 51268
+    },
+    {
+      "state": "KY",
+      "count": 7,
+      "affected": 36487
+    },
+    {
+      "state": "MT",
+      "count": 5,
+      "affected": 27239
+    },
+    {
+      "state": "NM",
+      "count": 3,
+      "affected": 10883
+    },
+    {
+      "state": "AK",
+      "count": 2,
+      "affected": 10687
+    },
+    {
+      "state": "OR",
+      "count": 4,
+      "affected": 10419
+    },
+    {
+      "state": "DC",
+      "count": 2,
+      "affected": 4149
+    },
+    {
+      "state": "NV",
+      "count": 2,
+      "affected": 4129
+    }
+  ],
+  "byBreachType": [
+    {
+      "type": "Hacking/IT Incident",
+      "count": 678,
+      "affected": 300151524
+    },
+    {
+      "type": "Unauthorized Access/Disclosure",
+      "count": 105,
+      "affected": 20348610
+    },
+    {
+      "type": "Theft",
+      "count": 15,
+      "affected": 64788
+    },
+    {
+      "type": "Loss",
+      "count": 5,
+      "affected": 20931
+    },
+    {
+      "type": "Improper Disposal",
+      "count": 2,
+      "affected": 9241
+    }
+  ],
+  "byLocation": [
+    {
+      "location": "Network Server",
+      "count": 532,
+      "affected": 311472184
+    },
+    {
+      "location": "Email",
+      "count": 164,
+      "affected": 3962964
+    },
+    {
+      "location": "Email, Network Server",
+      "count": 2,
+      "affected": 1871180
+    },
+    {
+      "location": "Electronic Medical Record, Network Server",
+      "count": 5,
+      "affected": 1106949
+    },
+    {
+      "location": "Desktop Computer, Network Server",
+      "count": 4,
+      "affected": 860555
+    },
+    {
+      "location": "Other",
+      "count": 12,
+      "affected": 842292
+    },
+    {
+      "location": "Electronic Medical Record",
+      "count": 25,
+      "affected": 192545
+    },
+    {
+      "location": "Paper/Films",
+      "count": 26,
+      "affected": 106107
+    },
+    {
+      "location": "Desktop Computer, Laptop",
+      "count": 1,
+      "affected": 61104
+    },
+    {
+      "location": "Desktop Computer, Laptop, Network Server",
+      "count": 2,
+      "affected": 27566
+    },
+    {
+      "location": "Other Portable Electronic Device",
+      "count": 4,
+      "affected": 18124
+    },
+    {
+      "location": "Laptop",
+      "count": 8,
+      "affected": 17433
+    },
+    {
+      "location": "Electronic Medical Record, Paper/Films",
+      "count": 1,
+      "affected": 15263
+    },
+    {
+      "location": "Electronic Medical Record, Network Server, Other",
+      "count": 1,
+      "affected": 9078
+    },
+    {
+      "location": "Other, Other Portable Electronic Device, Paper/Films",
+      "count": 1,
+      "affected": 8472
+    },
+    {
+      "location": "Network Server, Other",
+      "count": 3,
+      "affected": 5817
+    },
+    {
+      "location": "Desktop Computer",
+      "count": 4,
+      "affected": 5063
+    },
+    {
+      "location": "Email, Other",
+      "count": 2,
+      "affected": 4265
+    },
+    {
+      "location": "Desktop Computer, Electronic Medical Record, Email, Laptop",
+      "count": 1,
+      "affected": 1900
+    },
+    {
+      "location": "Desktop Computer, Electronic Medical Record, Email, Other Portable Electronic Device, Paper/Films",
+      "count": 1,
+      "affected": 1800
+    },
+    {
+      "location": "Laptop, Other Portable Electronic Device, Paper/Films",
+      "count": 2,
+      "affected": 1324
+    },
+    {
+      "location": "Other, Paper/Films",
+      "count": 1,
+      "affected": 1000
+    },
+    {
+      "location": "Other, Other Portable Electronic Device",
+      "count": 1,
+      "affected": 959
+    },
+    {
+      "location": "Laptop, Other Portable Electronic Device",
+      "count": 1,
+      "affected": 650
+    },
+    {
+      "location": "Desktop Computer, Electronic Medical Record, Email, Network Server",
+      "count": 1,
+      "affected": 500
+    }
+  ],
+  "byEntityType": [
+    {
+      "type": "Business Associate",
+      "count": 147,
+      "affected": 238335019
+    },
+    {
+      "type": "Healthcare Provider",
+      "count": 587,
+      "affected": 63601988
+    },
+    {
+      "type": "Health Plan",
+      "count": 70,
+      "affected": 18432359
+    },
+    {
+      "type": "Healthcare Clearing House",
+      "count": 1,
+      "affected": 225728
+    }
+  ],
+  "byYear": [
+    {
+      "year": 2022,
+      "count": 1,
+      "affected": 1868831
+    },
+    {
+      "year": 2023,
+      "count": 168,
+      "affected": 51712205
+    },
+    {
+      "year": 2024,
+      "count": 468,
+      "affected": 260914667
+    },
+    {
+      "year": 2025,
+      "count": 168,
+      "affected": 6099391
+    }
+  ],
+  "stateBreachType": [
+    {
+      "state": "IL",
+      "breachType": "Hacking/IT Incident",
+      "count": 43,
+      "affected": 3896183
+    },
+    {
+      "state": "IL",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 4,
+      "affected": 5328
+    },
+    {
+      "state": "IL",
+      "breachType": "Theft",
+      "count": 1,
+      "affected": 4945
+    },
+    {
+      "state": "TX",
+      "breachType": "Hacking/IT Incident",
+      "count": 50,
+      "affected": 14203215
+    },
+    {
+      "state": "TX",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 13,
+      "affected": 213971
+    },
+    {
+      "state": "TX",
+      "breachType": "Loss",
+      "count": 1,
+      "affected": 13184
+    },
+    {
+      "state": "OH",
+      "breachType": "Hacking/IT Incident",
+      "count": 45,
+      "affected": 470727
+    },
+    {
+      "state": "OH",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 4,
+      "affected": 3224848
+    },
+    {
+      "state": "OH",
+      "breachType": "Theft",
+      "count": 1,
+      "affected": 3318
+    },
+    {
+      "state": "OH",
+      "breachType": "Improper Disposal",
+      "count": 1,
+      "affected": 1241
+    },
+    {
+      "state": "PA",
+      "breachType": "Hacking/IT Incident",
+      "count": 31,
+      "affected": 2343508
+    },
+    {
+      "state": "PA",
+      "breachType": "Theft",
+      "count": 1,
+      "affected": 602
+    },
+    {
+      "state": "PA",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 5,
+      "affected": 1306302
+    },
+    {
+      "state": "CT",
+      "breachType": "Hacking/IT Incident",
+      "count": 12,
+      "affected": 1147899
+    },
+    {
+      "state": "CT",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 3,
+      "affected": 333897
+    },
+    {
+      "state": "NJ",
+      "breachType": "Hacking/IT Incident",
+      "count": 19,
+      "affected": 4888851
+    },
+    {
+      "state": "NJ",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 3,
+      "affected": 2605
+    },
+    {
+      "state": "NJ",
+      "breachType": "Theft",
+      "count": 1,
+      "affected": 650
+    },
+    {
+      "state": "VA",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 1,
+      "affected": 1620
+    },
+    {
+      "state": "VA",
+      "breachType": "Hacking/IT Incident",
+      "count": 10,
+      "affected": 309044
+    },
+    {
+      "state": "IN",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 3,
+      "affected": 11992
+    },
+    {
+      "state": "IN",
+      "breachType": "Hacking/IT Incident",
+      "count": 27,
+      "affected": 2381636
+    },
+    {
+      "state": "MN",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 2,
+      "affected": 2911
+    },
+    {
+      "state": "MN",
+      "breachType": "Hacking/IT Incident",
+      "count": 20,
+      "affected": 191095843
+    },
+    {
+      "state": "AZ",
+      "breachType": "Hacking/IT Incident",
+      "count": 9,
+      "affected": 226927
+    },
+    {
+      "state": "AZ",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 2,
+      "affected": 17596
+    },
+    {
+      "state": "GA",
+      "breachType": "Hacking/IT Incident",
+      "count": 20,
+      "affected": 1793385
+    },
+    {
+      "state": "GA",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 1,
+      "affected": 695
+    },
+    {
+      "state": "GA",
+      "breachType": "Theft",
+      "count": 1,
+      "affected": 9940
+    },
+    {
+      "state": "MI",
+      "breachType": "Hacking/IT Incident",
+      "count": 25,
+      "affected": 2896682
+    },
+    {
+      "state": "MI",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 6,
+      "affected": 13484
+    },
+    {
+      "state": "MI",
+      "breachType": "Theft",
+      "count": 1,
+      "affected": 700
+    },
+    {
+      "state": "NH",
+      "breachType": "Hacking/IT Incident",
+      "count": 4,
+      "affected": 93290
+    },
+    {
+      "state": "SC",
+      "breachType": "Hacking/IT Incident",
+      "count": 4,
+      "affected": 90125
+    },
+    {
+      "state": "SC",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 1,
+      "affected": 4125
+    },
+    {
+      "state": "LA",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 3,
+      "affected": 40820
+    },
+    {
+      "state": "LA",
+      "breachType": "Hacking/IT Incident",
+      "count": 2,
+      "affected": 2897486
+    },
+    {
+      "state": "OK",
+      "breachType": "Hacking/IT Incident",
+      "count": 10,
+      "affected": 2714903
+    },
+    {
+      "state": "OK",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 1,
+      "affected": 38945
+    },
+    {
+      "state": "WI",
+      "breachType": "Hacking/IT Incident",
+      "count": 14,
+      "affected": 829490
+    },
+    {
+      "state": "WI",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 1,
+      "affected": 868
+    },
+    {
+      "state": "NM",
+      "breachType": "Hacking/IT Incident",
+      "count": 2,
+      "affected": 8967
+    },
+    {
+      "state": "NM",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 1,
+      "affected": 1916
+    },
+    {
+      "state": "WA",
+      "breachType": "Hacking/IT Incident",
+      "count": 11,
+      "affected": 1885896
+    },
+    {
+      "state": "TN",
+      "breachType": "Hacking/IT Incident",
+      "count": 26,
+      "affected": 16126451
+    },
+    {
+      "state": "TN",
+      "breachType": "Theft",
+      "count": 1,
+      "affected": 1690
+    },
+    {
+      "state": "TN",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 3,
+      "affected": 2159
+    },
+    {
+      "state": "NY",
+      "breachType": "Hacking/IT Incident",
+      "count": 56,
+      "affected": 8582055
+    },
+    {
+      "state": "NY",
+      "breachType": "Theft",
+      "count": 2,
+      "affected": 26698
+    },
+    {
+      "state": "NY",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 3,
+      "affected": 636732
+    },
+    {
+      "state": "KY",
+      "breachType": "Hacking/IT Incident",
+      "count": 4,
+      "affected": 8926
+    },
+    {
+      "state": "KY",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 3,
+      "affected": 27561
+    },
+    {
+      "state": "MS",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 1,
+      "affected": 51266
+    },
+    {
+      "state": "MS",
+      "breachType": "Hacking/IT Incident",
+      "count": 9,
+      "affected": 449550
+    },
+    {
+      "state": "CA",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 6,
+      "affected": 13493249
+    },
+    {
+      "state": "CA",
+      "breachType": "Theft",
+      "count": 2,
+      "affected": 2293
+    },
+    {
+      "state": "CA",
+      "breachType": "Hacking/IT Incident",
+      "count": 32,
+      "affected": 3978308
+    },
+    {
+      "state": "CA",
+      "breachType": "Loss",
+      "count": 1,
+      "affected": 1416
+    },
+    {
+      "state": "CO",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 2,
+      "affected": 68558
+    },
+    {
+      "state": "CO",
+      "breachType": "Hacking/IT Incident",
+      "count": 8,
+      "affected": 2698960
+    },
+    {
+      "state": "MO",
+      "breachType": "Hacking/IT Incident",
+      "count": 11,
+      "affected": 8705374
+    },
+    {
+      "state": "MO",
+      "breachType": "Theft",
+      "count": 1,
+      "affected": 980
+    },
+    {
+      "state": "MO",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 2,
+      "affected": 34015
+    },
+    {
+      "state": "KS",
+      "breachType": "Hacking/IT Incident",
+      "count": 12,
+      "affected": 457576
+    },
+    {
+      "state": "KS",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 3,
+      "affected": 44751
+    },
+    {
+      "state": "KS",
+      "breachType": "Loss",
+      "count": 1,
+      "affected": 4265
+    },
+    {
+      "state": "NC",
+      "breachType": "Hacking/IT Incident",
+      "count": 20,
+      "affected": 822469
+    },
+    {
+      "state": "NC",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 6,
+      "affected": 656358
+    },
+    {
+      "state": "NC",
+      "breachType": "Theft",
+      "count": 1,
+      "affected": 500
+    },
+    {
+      "state": "MA",
+      "breachType": "Hacking/IT Incident",
+      "count": 22,
+      "affected": 3357953
+    },
+    {
+      "state": "MA",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 4,
+      "affected": 27822
+    },
+    {
+      "state": "MA",
+      "breachType": "Loss",
+      "count": 1,
+      "affected": 959
+    },
+    {
+      "state": "RI",
+      "breachType": "Hacking/IT Incident",
+      "count": 3,
+      "affected": 156402
+    },
+    {
+      "state": "IA",
+      "breachType": "Hacking/IT Incident",
+      "count": 11,
+      "affected": 1682518
+    },
+    {
+      "state": "IA",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 1,
+      "affected": 733
+    },
+    {
+      "state": "FL",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 4,
+      "affected": 36124
+    },
+    {
+      "state": "FL",
+      "breachType": "Hacking/IT Incident",
+      "count": 33,
+      "affected": 7368248
+    },
+    {
+      "state": "FL",
+      "breachType": "Loss",
+      "count": 1,
+      "affected": 1107
+    },
+    {
+      "state": "HI",
+      "breachType": "Theft",
+      "count": 1,
+      "affected": 8472
+    },
+    {
+      "state": "HI",
+      "breachType": "Hacking/IT Incident",
+      "count": 2,
+      "affected": 147021
+    },
+    {
+      "state": "WV",
+      "breachType": "Hacking/IT Incident",
+      "count": 2,
+      "affected": 76426
+    },
+    {
+      "state": "NE",
+      "breachType": "Hacking/IT Incident",
+      "count": 11,
+      "affected": 3283348
+    },
+    {
+      "state": "MD",
+      "breachType": "Hacking/IT Incident",
+      "count": 9,
+      "affected": 501921
+    },
+    {
+      "state": "MD",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 3,
+      "affected": 13869
+    },
+    {
+      "state": "MD",
+      "breachType": "Theft",
+      "count": 1,
+      "affected": 4000
+    },
+    {
+      "state": "OR",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 2,
+      "affected": 1875
+    },
+    {
+      "state": "OR",
+      "breachType": "Hacking/IT Incident",
+      "count": 2,
+      "affected": 8544
+    },
+    {
+      "state": "AL",
+      "breachType": "Hacking/IT Incident",
+      "count": 16,
+      "affected": 1615029
+    },
+    {
+      "state": "AL",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 1,
+      "affected": 1655
+    },
+    {
+      "state": "DC",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 1,
+      "affected": 1847
+    },
+    {
+      "state": "DC",
+      "breachType": "Hacking/IT Incident",
+      "count": 1,
+      "affected": 2302
+    },
+    {
+      "state": "AK",
+      "breachType": "Hacking/IT Incident",
+      "count": 2,
+      "affected": 10687
+    },
+    {
+      "state": "ID",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 1,
+      "affected": 759
+    },
+    {
+      "state": "ID",
+      "breachType": "Hacking/IT Incident",
+      "count": 2,
+      "affected": 469088
+    },
+    {
+      "state": "MT",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 1,
+      "affected": 1370
+    },
+    {
+      "state": "MT",
+      "breachType": "Hacking/IT Incident",
+      "count": 4,
+      "affected": 25869
+    },
+    {
+      "state": "NV",
+      "breachType": "Hacking/IT Incident",
+      "count": 1,
+      "affected": 3112
+    },
+    {
+      "state": "NV",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 1,
+      "affected": 1017
+    },
+    {
+      "state": "UT",
+      "breachType": "Hacking/IT Incident",
+      "count": 3,
+      "affected": 4303676
+    },
+    {
+      "state": "DE",
+      "breachType": "Hacking/IT Incident",
+      "count": 4,
+      "affected": 954897
+    },
+    {
+      "state": "AR",
+      "breachType": "Hacking/IT Incident",
+      "count": 6,
+      "affected": 59156
+    },
+    {
+      "state": "AR",
+      "breachType": "Improper Disposal",
+      "count": 1,
+      "affected": 8000
+    },
+    {
+      "state": "AR",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 2,
+      "affected": 3967
+    },
+    {
+      "state": "ME",
+      "breachType": "Hacking/IT Incident",
+      "count": 6,
+      "affected": 91333
+    },
+    {
+      "state": "ND",
+      "breachType": "Hacking/IT Incident",
+      "count": 2,
+      "affected": 30268
+    },
+    {
+      "state": "ND",
+      "breachType": "Unauthorized Access/Disclosure",
+      "count": 1,
+      "affected": 21000
+    }
+  ]
+}

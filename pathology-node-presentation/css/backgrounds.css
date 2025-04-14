@@ -1,0 +1,99 @@
+/* Beautiful backgrounds for the presentation */
+
+/* Global background for all slides */
+.reveal {
+  background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(240,240,240,0.95) 100%);
+}
+
+/* Title slide background */
+.title-slide {
+  background: linear-gradient(135deg, rgba(44,62,80,0.9) 0%, rgba(52,152,219,0.9) 100%);
+  color: white !important;
+}
+
+.title-slide h1, 
+.title-slide h3, 
+.title-slide p {
+  color: white !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Learning objectives slide */
+section:nth-of-type(3) {
+  background: linear-gradient(135deg, rgba(236,240,241,0.9) 0%, rgba(189,195,199,0.9) 100%);
+}
+
+/* Why it matters slide */
+section:nth-of-type(4) {
+  background: linear-gradient(135deg, rgba(52,152,219,0.1) 0%, rgba(52,152,219,0.2) 100%);
+}
+
+/* Regulations slide */
+.regulations-slide {
+  background: linear-gradient(135deg, rgba(44,62,80,0.05) 0%, rgba(44,62,80,0.1) 100%);
+}
+
+/* HIPAA slide */
+section:nth-of-type(6) {
+  background: linear-gradient(135deg, rgba(52,152,219,0.1) 0%, rgba(52,152,219,0.2) 100%);
+}
+
+/* CLIA slide */
+section:nth-of-type(7) {
+  background: linear-gradient(135deg, rgba(46,204,113,0.1) 0%, rgba(46,204,113,0.2) 100%);
+}
+
+/* FDA slide */
+section:nth-of-type(8) {
+  background: linear-gradient(135deg, rgba(231,76,60,0.1) 0%, rgba(231,76,60,0.2) 100%);
+}
+
+/* Internal Validation slide */
+section:nth-of-type(9) {
+  background: linear-gradient(135deg, rgba(155,89,182,0.1) 0%, rgba(155,89,182,0.2) 100%);
+}
+
+/* Digital Pathology slide */
+section:nth-of-type(10) {
+  background: linear-gradient(135deg, rgba(52,152,219,0.1) 0%, rgba(26,188,156,0.2) 100%);
+}
+
+/* AI slide */
+section:nth-of-type(11) {
+  background: linear-gradient(135deg, rgba(155,89,182,0.1) 0%, rgba(142,68,173,0.2) 100%);
+}
+
+/* Key Takeaways slide */
+section:nth-of-type(12) {
+  background: linear-gradient(135deg, rgba(44,62,80,0.1) 0%, rgba(44,62,80,0.2) 100%);
+}
+
+/* Q&A slide */
+section:nth-of-type(13) {
+  background: linear-gradient(135deg, rgba(52,152,219,0.9) 0%, rgba(44,62,80,0.9) 100%);
+  color: white !important;
+}
+
+section:nth-of-type(13) h2 {
+  color: white !important;
+  border-bottom-color: white;
+}
+
+/* Add subtle pattern overlay to all slides */
+.reveal .slides section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><path d="M0 0L100 100M100 0L0 100" stroke="rgba(0,0,0,0.03)" stroke-width="0.5"/></svg>');
+  background-size: 20px 20px;
+  z-index: -1;
+}
+
+/* Add a subtle border to all slides */
+.reveal .slides section {
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}

@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regulations, Technology, and the Future of Pathology</title>
+    
+    <!-- RevealJS Core CSS -->
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/white.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/transitions.css">
+    <link rel="stylesheet" href="css/backgrounds.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/title-slide.css">
+    <link rel="stylesheet" href="css/takeaways.css">
+    <link rel="stylesheet" href="css/qa-slide.css">
+    <link rel="stylesheet" href="css/external-content.css">
+    <link rel="stylesheet" href="css/breach-visualization.css">
+    <link rel="stylesheet" href="css/font-adjustments.css">
+    <link rel="stylesheet" href="css/deidentification.css">
+    
+    <style>
+        /* Fallback styles in case custom CSS files aren't loaded */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        .reveal h1, .reveal h2, .reveal h3 {
+            color: #2c3e50;
+        }
+        .title-slide h1 {
+            margin-bottom: 0.2em;
+        }
+        .title-slide h3 {
+            color: #3498db;
+            margin-bottom: 1.5em;
+        }
+        .fragment-list .fragment {
+            opacity: 0;
+        }
+        .fragment-list .fragment.visible {
+            opacity: 1;
+        }
+        .key-term {
+            color: #3498db;
+            font-weight: 600;
+            cursor: pointer;
+            border-bottom: 1px dashed #3498db;
+        }
+        .definition-panel {
+            background-color: rgba(236, 240, 241, 0.8);
+            border-left: 4px solid #3498db;
+            padding: 0.8em;
+            margin: 1em 0;
+            border-radius: 0 4px 4px 0;
+            display: none;
+        }
+        .visualization-container {
+            width: 100%;
+            height: 400px;
+            margin: 1em 0;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- SLIDE 1: Title Slide -->
+            <section data-transition="zoom" class="title-slide">
+                <div class="title-content">
+                    <h1 class="animate-title">Regulations, Technology, and the Future of Pathology</h1>
+                    <h3 class="animate-subtitle">What Every Pathology Resident Should Know About LIS and IMS</h3>
+                    <div class="presenter-box animate-presenter">
+                        <p><em>Peter Gershkovich, MD. MHA</em><br>Yale University School of Medicine | April 2025</p>
+                    </div>
+                </div>
+                <div class="slide-background-overlay"></div>
+            </section>
+
+            <!-- SLIDE 2: Conflict of Interest Disclosure -->
+            <section data-transition="fade">
+                <h2>Conflict of Interest Disclosure</h2>
+                <ul class="fragment-list">
+                    <li class="fragment">Consultant for Applicate Technologies Inc.</li>
+                    <li class="fragment">This presentation is intended solely for educational purposes. It is designed to inform and engage learners in current practices, regulatory frameworks, and emerging trends in Laboratory Information Systems (LIS) and Digital Pathology and AI Orchestration Systems. All content reflects the presenter’s independent views and does not represent the official position of any institution or regulatory agency.</li>
+                </ul>
+            </section>
+
+            <!-- SLIDE 3: Learning Objectives -->
+            <section data-transition="fade">
+                <h2>Learning Objectives</h2>
+                <p>By the end of this session, you should be able to:</p>
+                <ul class="fragment-list">
+                    <li class="fragment">Understand key external regulations affecting LIS and IMS</li>
+                    <li class="fragment">Recognize the role of HIPAA, FDA, and internal validation in laboratory systems</li>
+                    <li class="fragment">Comprehend how regulations shape software and organizational design</li>
+                    <li class="fragment">Explore the informatician's role in digital transformation</li>
+                    <li class="fragment">Appreciate the growing importance of enterprise analytics</li>
+                </ul>
+            </section>
+
+            <!-- SLIDE 4: Why It Matters -->
+            <section data-transition="slide">
+                <h2>Why It Matters</h2>
+                <ul>
+                    <li>Pathology is increasingly <span class="key-term" data-definition-id="digital-def">digital</span></li>
+                    <li>Systems like <span class="key-term" data-definition-id="lis-def">LIS</span> and <span class="key-term" data-definition-id="ims-def">IMS</span> are core to your workflow</li>
+                    <li>Regulation shapes what tools we can use, how we use them, and how fast we can change</li>
+                    <li><strong>YOU</strong> are the next generation of pathologists: be informed, be involved</li>
+                </ul>
+                
+                <div class="definitions">
+                    <div id="digital-def" class="definition-panel">
+                        <p>Digital Pathology: The practice of converting glass slides into digital images for viewing, analysis, storage, and management.</p>
+                    </div>
+                    <div id="lis-def" class="definition-panel">
+                        <p>LIS (Laboratory Information System): Software that manages sample processing, results reporting, and workflow in clinical laboratories.</p>
+                    </div>
+                    <div id="ims-def" class="definition-panel">
+                        <p>IMS (Image Management System): Software for storing, managing, and viewing digital pathology images.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 5: Key External Regulations -->
+            <section data-transition="convex" class="regulations-slide">
+                <h2>Key External Regulations</h2>
+                
+                <div class="regulations-grid">
+                    <div class="regulation-card fragment fade-in" data-regulation="hipaa">
+                        <div class="card-header hipaa-header">
+                            <h3>HIPAA</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Patient privacy and data security</p>
+                        </div>
+                    </div>
+                    
+                    <div class="regulation-card fragment fade-in" data-regulation="clia">
+                        <div class="card-header clia-header">
+                            <h3>CLIA</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Governs lab testing standards</p>
+                        </div>
+                    </div>
+                    
+                    <div class="regulation-card fragment fade-in" data-regulation="fda">
+                        <div class="card-header fda-header">
+                            <h3>FDA</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Software as a Medical Device (SaMD)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="regulation-card fragment fade-in" data-regulation="cap">
+                        <div class="card-header cap-header">
+                            <h3>CAP & JCAHO</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Accreditation and compliance</p>
+                        </div>
+                    </div>
+                    
+                    <div class="regulation-card fragment fade-in" data-regulation="nist">
+                        <div class="card-header nist-header">
+                            <h3>NIST</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Cybersecurity best practices for software</p>
+                        </div>
+                    </div>
+                    
+                    <div class="regulation-card fragment fade-in" data-regulation="insurance">
+                        <div class="card-header insurance-header">
+                            <h3>Insurance</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Technical requirements for covered institutions</p>
+                        </div>
+                    </div>
+                    
+                    <div class="regulation-card fragment fade-in" data-regulation="internal">
+                        <div class="card-header internal-header">
+                            <h3>Internal</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Organizational policies influenced by insurers, consultants, and legal advisors</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 6: HIPAA & Data Protection -->
+            <section data-transition="slide">
+                <h2>HIPAA & Data Protection</h2>
+                <ul>
+                    <li>What HIPAA covers: PHI, access control, audit trails</li>
+                    <li>Relevance to LIS/IMS: patient data, annotations, sign-outs</li>
+                    <li>Encryption, secure storage, and transmission</li>
+                    <li>Case study: breach example and its impact</li>
+                </ul>
+            </section>
+
+            <!-- SLIDE 6A: HHS Breach Data Visualization (Part 1) -->
+            <section data-transition="slide" class="breach-data-slide" id="breach-slide-1">
+                <h2>HHS Breach Portal: Types & Locations</h2>
+                <div id="breach-charts-1" class="breach-charts-container"></div>
+            </section>
+            
+            <!-- SLIDE 6B: HHS Breach Data Visualization (Part 2) -->
+            <section data-transition="slide" class="breach-data-slide" id="breach-slide-2">
+                <h2>HHS Breach Portal: States & Entities</h2>
+                <div id="breach-charts-2" class="breach-charts-container"></div>
+            </section>
+            
+            <!-- SLIDE 6B: HIPAA External Content - OCR -->
+            <section data-transition="slide" class="external-content-slide">
+                <h2>HIPAA: Office for Civil Rights (OCR)</h2>
+                <div class="external-content-container">
+                    <div class="external-content-header">
+                        <div class="agency-logo">OCR</div>
+                        <h3>HHS Office for Civil Rights</h3>
+                    </div>
+                    <div class="external-content-body">
+                        <h4>Key HIPAA Resources from OCR:</h4>
+                        <ul>
+                            <li>HIPAA Privacy Rule - Governs the use and disclosure of PHI</li>
+                            <li>HIPAA Security Rule - Sets standards for securing electronic PHI</li>
+                            <li>HIPAA Breach Notification Rule - Requirements for reporting breaches</li>
+                            <li>HIPAA Enforcement - Compliance and audit programs</li>
+                        </ul>
+                        <div class="external-source">
+                            <p>Source: <a href="https://www.hhs.gov/ocr/privacy/hipaa/understanding/index.html">HHS.gov</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 6B: HIPAA External Content - Permitted Uses -->
+            <section data-transition="slide" class="external-content-slide">
+                <h2>HIPAA: Permitted Uses & Disclosures</h2>
+                <div class="external-content-container">
+                    <div class="permitted-uses-grid">
+                        <div class="permitted-use-card">
+                            <div class="use-header">Treatment</div>
+                            <div class="use-body">
+                                <p>Exchange of PHI for patient treatment purposes</p>
+                            </div>
+                        </div>
+                        <div class="permitted-use-card">
+                            <div class="use-header">Health Care Operations</div>
+                            <div class="use-body">
+                                <p>Quality assessment, business planning, training</p>
+                            </div>
+                        </div>
+                        <div class="permitted-use-card">
+                            <div class="use-header">Public Health</div>
+                            <div class="use-body">
+                                <p>Disease reporting, surveillance, interventions</p>
+                            </div>
+                        </div>
+                        <div class="permitted-use-card">
+                            <div class="use-header">Health Oversight</div>
+                            <div class="use-body">
+                                <p>Audits, investigations, inspections by agencies</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="external-source">
+                        <p>Source: <a href="https://www.healthit.gov/topic/privacy-security-and-hipaa/health-it-privacy-and-security-resources-providers">HealthIT.gov</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 6C: HIPAA De-identification Methods -->
+            <section data-transition="slide" class="deidentification-slide">
+                <h2>HIPAA De-identification Methods</h2>
+                <div class="deidentification-container">
+                   <div class="methods-container">
+                        <!-- Safe Harbor Method -->
+                        <div class="method-card">
+                            <div class="method-header">Safe Harbor Method</div>
+                            <div class="method-body">
+                                <p>Removal of 18 specific identifiers:</p>
+                                <ul>
+                                    <li>Names</li>
+                                    <li>Geographic < state</li>
+                                    <li>Dates (except year)</li>
+                                    <li>Phone/fax</li>
+                                    <li>Email</li>
+                                    <li>SSN</li>
+                                    <li>Medical record #</li>
+                                    <li>Health plan #</li>
+                                    <li>Account #</li>
+                                    <li>Certificate/license #</li>
+                                    <li>Vehicle identifiers</li>
+                                    <li>Device IDs</li>
+                                    <li>Web URLs</li>
+                                    <li>IP address</li>
+                                    <li>Biometric IDs</li>
+                                    <li>Photos</li>
+                                    <li>Unique characteristics</li>
+                                    <li>Other unique codes</li>
+                                </ul>
+                                
+                                <div class="data-example" id="safe-harbor-data">
+                                    <div class="data-field identifier"><span class="field-name">Name:</span> <span class="field-value">John Smith</span><span class="field-name">DOB:</span> <span class="field-value">04/15/1975</span></div>
+                                    <div class="data-field identifier"><span class="field-name">Address:</span> <span class="field-value">123 Main St, New Haven, CT</span><span class="field-name">  </span> <span class="field-value">(203) 555-1234</span></div>
+                                    <div class="data-field identifier"><span class="field-name">Diagnosis:</span> <span class="field-value">Adenocarcinoma</span><span class="field-name">Treatment:</span> <span class="field-value">Surgical resection</span></div>
+                                </div>
+                                
+                                <button class="toggle-button" id="safe-harbor-toggle">Apply Safe Harbor Method</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Expert Determination Method -->
+                        <div class="method-card">
+                            <div class="method-header">Expert Determination Method</div>
+                            <div class="method-body">
+                                <p>A qualified expert applies statistical methods to ensure:</p>
+                                <ul>
+                                    <li>Very small risk that data could identify an individual</li>
+                                    <li>Risk assessment based on statistical principles</li>
+                                    <li>Methods and results documented</li>
+                                </ul>
+                                
+                                <div class="data-example" id="expert-data">
+                                    <div class="data-field high-risk"><span class="field-name">Name:</span> <span class="field-value">John Smith</span></div>
+                                    <div class="data-field medium-risk"><span class="field-name">DOB:</span> <span class="field-value">04/15/1975</span></div>
+                                    <div class="data-field medium-risk"><span class="field-name">Address:</span> <span class="field-value">123 Main St, New Haven, CT</span></div>
+                                    <div class="data-field high-risk"><span class="field-name">Phone:</span> <span class="field-value">(203) 555-1234</span></div>
+                                    <div class="data-field"><span class="field-name">Diagnosis:</span> <span class="field-value">Adenocarcinoma</span></div>
+                                    <div class="data-field"><span class="field-name">Treatment:</span> <span class="field-value">Surgical resection</span></div>
+                                </div>
+                                
+                                <button class="toggle-button" id="expert-toggle">Apply Expert Determination</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-table-container">
+                        <table class="comparison-table">
+                            <tr>
+                                <th>Feature</th>
+                                <th>Safe Harbor</th>
+                                <th>Expert Determination</th>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Implementation</td>
+                                <td>Straightforward, rule-based</td>
+                                <td>Complex, requires expertise</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Data Utility</td>
+                                <td>Lower (more data removed)</td>
+                                <td>Higher (tailored approach)</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-name">Cost</td>
+                                <td>Lower</td>
+                                <td>Higher (expert fees)</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="external-source">
+                        <p>Source: <a href="https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html">HHS.gov</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 7: CLIA & Laboratory Oversight -->
+            <section data-transition="slide">
+                <h2>CLIA & Laboratory Oversight</h2>
+                <ul>
+                    <li>Role in ensuring test accuracy and reproducibility</li>
+                    <li>LIS as part of a compliant testing environment</li>
+                    <li>Pre-analytic, analytic, post-analytic phases</li>
+                    <li>Validation of informatics tools for lab use</li>
+                </ul>
+            </section>
+
+            <!-- SLIDE 8: FDA and Software Regulation -->
+            <section data-transition="slide">
+                <h2>FDA and Software Regulation</h2>
+                <ul>
+                    <li>SaMD and the FDA: what qualifies?</li>
+                    <li>IMS increasingly under scrutiny</li>
+                    <li>LDTs (Laboratory Developed Tests) vs FDA-cleared tests</li>
+                    <li>Risk-based approach: Class I-III software</li>
+                    <li>Recent examples (e.g., AI-assisted diagnosis)</li>
+                </ul>
+            </section>
+
+            <!-- SLIDE 8A: ONC External Content -->
+            <section data-transition="slide" class="standard-slide">
+                <h2>Office of the National Coordinator (ONC)</h2>
+                <div class="content-columns">
+                    <div class="left-column">
+                        <div class="info-box">
+                            <h3>Key Responsibilities</h3>
+                            <ul>
+                                <li>National health IT strategy and policy</li>
+                                <li>Standards for health information exchange</li>
+                                <li>Certification of health IT products</li>
+                                <li>Promotion of interoperability</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right-column">
+                        <div class="info-box highlight-box">
+                            <h3>Impact on Pathology</h3>
+                            <ul>
+                                <li>Influences LIS certification requirements</li>
+                                <li>Shapes interoperability standards for lab data</li>
+                                <li>Drives digital pathology adoption through policy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-footer">
+                    <p>Learn more: <a href="https://www.healthit.gov/" target="_blank">HealthIT.gov</a></p>
+                </div>
+            </section>
+
+            <!-- SLIDE 8B: TEFCA External Content -->
+            <section data-transition="slide" class="external-content-slide">
+                <h2>Trusted Exchange Framework (TEFCA)</h2>
+                <div class="external-content-container">
+                    <div class="tefca-content">
+                        <div class="tefca-description">
+                            <ul>
+                                <li>Universal governance for nationwide interoperability</li>
+                                <li>Simplified connectivity for secure information exchange</li>
+                                <li>Ability for individuals to gather their healthcare information</li>
+                                <li>Common technical and legal requirements for sharing electronic health information</li>
+                            </ul>
+                        </div>
+                        <div class="tefca-diagram">
+                            <div class="diagram-box">
+                                <div class="diagram-title">TEFCA Components</div>
+                                <div class="diagram-items">
+                                    <div class="diagram-item">Trusted Exchange Framework</div>
+                                    <div class="diagram-item">Common Agreement</div>
+                                    <div class="diagram-item">Qualified Health Information Networks (QHINs)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="external-source">
+                            <p>Source: <a href="https://www.healthit.gov/topic/interoperability/trusted-exchange-framework-and-common-agreement-tefca">HealthIT.gov</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 9: Internal Validation -->
+            <section data-transition="fade">
+                <h2>Internal Validation: What, When, Why</h2>
+                <ul>
+                    <li>Internal validation vs. vendor claims</li>
+                    <li>Documentation and reproducibility</li>
+                    <li>Human factors & usability validation</li>
+                    <li>Example: validation of a new image viewer or LIS module</li>
+                </ul>
+            </section>
+
+            <!-- SLIDE 9A: FDA Approval of Digital Pathology Systems -->
+            <section data-transition="slide" class="fda-approval-slide">
+                <h2>FDA Approval of Digital Pathology Systems</h2>
+                <div class="content-columns">
+                    <div class="left-column">
+                        <div class="info-box">
+                            <h3>Philips IntelliSite Pathology Solution (2017)</h3>
+                            <ul>
+                                <li>First FDA-approved whole slide imaging system</li>
+                                <li>Approved as a <em>complete system</em>: scanner, software, and display</li>
+                                <li>Required extensive clinical validation (2,000+ cases)</li>
+                                <li>De novo pathway for novel technology</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right-column">
+                        <div class="info-box highlight-box">
+                            <h3>Regulatory Impact on Adoption</h3>
+                            <ul>
+                                <li>Delayed U.S. implementation vs. Europe and Canada</li>
+                                <li>COVID-19 led to temporary regulatory flexibility</li>
+                                <li>Holistic approach: scanner + viewer + monitors as one diagnostic package</li>
+                                <li>Validation burden on institutions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-footer">
+                    <p>Source: FDA, April 2017</p>
+                </div>
+            </section>
+
+            <!-- SLIDE 9B: AI Regulation in Pathology -->
+            <section data-transition="slide" class="ai-regulation-slide">
+                <h2>AI Regulation in Pathology</h2>
+                <div class="content-columns">
+                    <div class="left-column">
+                        <div class="info-box">
+                            <h3>Paige Prostate (2021)</h3>
+                            <ul>
+                                <li>First FDA-authorized AI for pathology</li>
+                                <li>Identifies areas suspicious for cancer</li>
+                                <li>7.3% improvement in cancer detection</li>
+                                <li>Adjunctive tool: pathologist must review</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right-column">
+                        <div class="info-box highlight-box">
+                            <h3>Implementation Considerations</h3>
+                            <ul>
+                                <li>On-label use: AI as assistant to pathologist</li>
+                                <li>Off-label potential: screening out benign cases</li>
+                                <li>Workflow implications: efficiency vs. oversight</li>
+                                <li>Future: potential for fewer subspecialists needed</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-footer">
+                    <p>Source: FDA, September 2021</p>
+                </div>
+            </section>
+
+            <!-- SLIDE 10: Digital Pathology: Then and Now -->
+            <section data-transition="slide">
+                <h2>Digital Pathology: Then and Now</h2>
+                <div class="workflow-comparison">
+                    <div class="workflow-traditional">
+                        <h3>Traditional Workflow</h3>
+                        <ul>
+                            <li>Glass slides</li>
+                            <li>Manual microscopy</li>
+                            <li>Physical storage</li>
+                            <li>Limited sharing capabilities</li>
+                        </ul>
+                    </div>
+                    <div class="workflow-digital">
+                        <h3>Digital Workflow</h3>
+                        <ul>
+                            <li>Whole slide imaging</li>
+                            <li>Digital viewing</li>
+                            <li>Cloud storage</li>
+                            <li>Remote consultation</li>
+                            <li>AI-assisted analysis</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 11: AI and Decision Support Systems -->
+            <section data-transition="slide" class="ai-decision-slide">
+                <h2>AI and Decision Support Systems</h2>
+                <div class="content-columns">
+                    <div class="left-column">
+                        <div class="info-box">
+                            <h3>Transformation of System Roles</h3>
+                            <ul>
+                                <li>From documentation tools to diagnostic assistants</li>
+                                <li>Image analysis algorithms and pattern recognition</li>
+                                <li>Quantitative measurements replacing subjective assessments</li>
+                                <li>Suggestion of diagnoses and differential considerations</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h3>Regulatory Implications</h3>
+                            <ul>
+                                <li>Higher scrutiny for diagnostic vs. documentation systems</li>
+                                <li>FDA classification based on risk to patients</li>
+                                <li>Required documentation of AI's role in diagnosis</li>
+                                <li>Continuous monitoring of performance in clinical use</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right-column">
+                        <div class="info-box highlight-box">
+                            <h3>Ethical and Practical Challenges</h3>
+                            <ul>
+                                <li>Psychological barrier to contradicting AI suggestions</li>
+                                <li>Hidden biases in training data affecting outcomes</li>
+                                <li>Unclear impact on trainee development and skills</li>
+                                <li>Need for automated validation tools to ensure quality</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h3>Risk Mitigation Strategies</h3>
+                            <ul>
+                                <li>Transparency in AI decision-making processes</li>
+                                <li>Clear documentation of AI's role in diagnosis</li>
+                                <li>Regular revalidation with new data</li>
+                                <li>Maintaining human oversight and final authority</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 11A: Enterprise Analytics -->            
+            <section data-transition="slide" class="analytics-slide">
+                <h2>Enterprise Analytics: The Backbone of Modern Healthcare</h2>
+                <div class="content-columns">
+                    <div class="left-column">
+                        <div class="info-box">
+                            <h3>Regulatory Compliance & Validation</h3>
+                            <ul>
+                                <li>Automated documentation of system usage</li>
+                                <li>Continuous monitoring of diagnostic accuracy</li>
+                                <li>Validation of AI algorithm performance over time</li>
+                                <li>Error tracking and quality improvement metrics</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h3>Cost-Benefit Analysis</h3>
+                            <ul>
+                                <li>Quantifiable metrics for digital transformation ROI</li>
+                                <li>Administrative burden measurement</li>
+                                <li>Throughput and efficiency calculations</li>
+                                <li>Resource utilization optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right-column">
+                        <div class="info-box highlight-box">
+                            <h3>The Hidden Cost of Healthcare</h3>
+                            <ul>
+                                <li>For every clinician, 5-10 non-clinical staff</li>
+                                <li>Compliance, cybersecurity, credentialing armies</li>
+                                <li>Multiple insurance and liability costs</li>
+                                <li>Only automation and analytics can address this imbalance</li>
+                            </ul>
+                        </div>
+                        <div class="quote-box">
+                            <p>"Without rigorous analytics, we cannot prove the value of digital transformation or meet regulatory requirements. Analytics running in the background can automatically validate systems, monitor performance, and guide evidence-based decisions."</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 12: Key Takeaways -->
+            <section data-transition="slide" class="takeaways-slide">
+                <h2>Key Takeaways</h2>
+                <div class="takeaways-container">
+                    <div class="takeaway-item fragment fade-right">
+                        Regulations exist to ensure patient safety and data integrity
+                    </div>
+                    <div class="takeaway-item fragment fade-right">
+                        Understanding regulatory frameworks helps you advocate for better systems
+                    </div>
+                    <div class="takeaway-item fragment fade-right">
+                        Digital transformation requires both technical and organizational change
+                    </div>
+                    <div class="takeaway-item fragment fade-right">
+                        Pathologists must be active participants in informatics decisions
+                    </div>
+                    <div class="takeaway-item fragment fade-right">
+                        Be proactive: your voice matters in digital transformation
+                    </div>
+                    <div class="takeaway-item fragment fade-right highlight">
+                        The future of pathology is not just digital. It is shaped by YOU.
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 13: Q&A -->
+            <section data-transition="fade" class="qa-slide">
+                <h2>Questions & Discussion</h2>
+                <div class="qa-container">
+                    <div class="qa-icon">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#2c3e50" stroke-width="2"/>
+                            <path d="M12 17V17.01" stroke="#2c3e50" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M12 14C12 11 15 11 15 9C15 7.34315 13.6569 6 12 6C10.3431 6 9 7.34315 9 9" stroke="#2c3e50" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <p class="qa-text">Please feel free to ask any questions about the topics covered today.</p>
+                    <div class="contact-info">
+                        <p>For follow-up questions: <strong>peter.gershkovich@yale.edu</strong></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- RevealJS Core JS -->
+    <script src="node_modules/reveal.js/dist/reveal.js"></script>
+    <script src="node_modules/reveal.js/plugin/notes/notes.js"></script>
+    <script src="node_modules/reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+    
+    <!-- D3.js for visualizations -->
+    <script src="node_modules/d3/dist/d3.min.js"></script>
+    
+    <!-- TopoJSON for map visualization -->
+    <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
+    
+    <!-- Breach data visualization -->
+    <script src="js/breach_visualization.js"></script>
+    
+    <!-- De-identification visualization -->
+    <script src="js/deidentification.js"></script>
+    
+    <script>
+        // Initialize RevealJS
+        Reveal.initialize({
+            // Presentation settings
+            width: 1200,
+            height: 700,
+            margin: 0.1,
+            minScale: 0.2,
+            maxScale: 2.0,
+            
+            // Display settings
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true,
+            
+            // Transition settings
+            transition: 'slide', // Default transition
+            transitionSpeed: 'default',
+            backgroundTransition: 'fade',
+            
+            // Plugins
+            plugins: [RevealNotes, RevealMarkdown, RevealHighlight]
+        });
+        
+        // Setup key term interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Key term definitions
+            document.querySelectorAll('.key-term').forEach(term => {
+                term.addEventListener('click', () => {
+                    const definitionId = term.getAttribute('data-definition-id');
+                    const definition = document.getElementById(definitionId);
+                    
+                    // Hide all other definitions
+                    document.querySelectorAll('.definition-panel').forEach(panel => {
+                        if (panel.id !== definitionId) {
+                            panel.style.display = 'none';
+                        }
+                    });
+                    
+                    // Toggle this definition
+                    if (definition) {
+                        definition.style.display = definition.style.display === 'block' ? 'none' : 'block';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

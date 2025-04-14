@@ -1,0 +1,24 @@
+{
+  "name": "pathology-node-presentation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "csv-parser": "^3.2.0",
+    "d3": "^7.9.0",
+    "express": "^5.1.0",
+    "reveal.js": "^5.2.1",
+    "three.js": "^0.77.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
