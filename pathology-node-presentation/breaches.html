@@ -6,60 +6,10 @@
   <title>HIPAA Breach Data Visualization</title>
   <!-- Load D3.js with integrity check and defer attribute -->
   <script src="https://d3js.org/d3.v7.min.js" integrity="sha384-ggyl1JgU/XXt8DTxAJ9xpJ0IHhh5P85ofLfaGzZ0vUOJQzBAu5QWI/UMBFKVq72+" crossorigin="anonymous"></script>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f5f7fa;
-    }
-    
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    
-    h1 {
-      color: #2c3e50;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    
-    .dashboard {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 20px;
-    }
-    
-    .chart-container {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-    }
-    
-    .chart-title {
-      text-align: center;
-      font-size: 1.2em;
-      margin-bottom: 15px;
-      color: #2c3e50;
-    }
-    
-    .chart {
-      width: 100%;
-      height: 300px;
-    }
-    
-    .tooltip {
-      position: absolute;
-      padding: 8px;
-      background: rgba(0, 0, 0, 0.7);
-      color: white;
-      border-radius: 4px;
-      font-size: 12px;
-      pointer-events: none;
-      opacity: 0;
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/transitions.css">
+  <link rel="stylesheet" href="css/backgrounds.css">
     }
     
     .error-message {
