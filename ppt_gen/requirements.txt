@@ -1,0 +1,13 @@
+# Essential packages only - no version constraints for maximum compatibility
+python-pptx
+Pillow
+gtts
+pyttsx3
+
+# Specify exact version for better compatibility
+lxml==5.1.0
+
+# Optional packages - comment out if they cause installation problems
+# pandas
+# numpy
+# matplotlib
