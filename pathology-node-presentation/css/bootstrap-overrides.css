@@ -1,0 +1,100 @@
+/* 
+ * Bootstrap Overrides for RevealJS Integration
+ * This file ensures Bootstrap components display properly within RevealJS slides
+ */
+
+/* Override RevealJS styles to better work with Bootstrap */
+.reveal .slides section {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+/* Allow Bootstrap containers to expand properly within slides */
+.reveal .slides section .container,
+.reveal .slides section .container-fluid {
+  width: 100% !important;
+  max-width: 1140px;
+  height: auto !important;
+  margin: 0 auto;
+}
+
+/* Fix Bootstrap card display inside slides */
+.reveal .card {
+  height: auto !important;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.reveal .card-header {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.reveal .card-body {
+  padding: 1.25rem;
+  flex: 1 1 auto;
+}
+
+/* Fix for headings within cards */
+.reveal .card-title {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+/* Fix for Bootstrap text and headings */
+.reveal h1, .reveal h2, .reveal h3, 
+.reveal h4, .reveal h5, .reveal h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.reveal p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Fix for list items */
+.reveal .list-group-item {
+  position: relative;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,.125);
+}
+
+/* Bootstrap table overrides */
+.reveal .table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border-collapse: collapse;
+}
+
+.reveal .table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+/* Fix for grid inside slides */
+.reveal .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+/* Fix fragment visibility with Bootstrap */
+.reveal .fragment.fade-in.visible {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}

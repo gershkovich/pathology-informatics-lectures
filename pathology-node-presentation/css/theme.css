@@ -71,12 +71,44 @@
 .data-field.redacted .field-value { color: #e74c3c; text-decoration: line-through; }
 .data-field.modified .field-value { color: #3498db; font-style: italic; }
 
-/* --- Font Adjustments (from font-adjustments.css) --- */
-.reveal h1 { font-size: 1.4em; }
-.reveal h2 { font-size: 1.1em; }
-.reveal h3 { font-size: 1em; }
-.reveal ul li { font-size: 0.9em; margin-bottom: 0.7em; }
-.reveal p { font-size: 0.9em; }
+/* --- Typography & Font Settings --- */
+/* Single source of truth for font sizes and typography */
+.reveal h1 { 
+  font-size: 1.4em; 
+  font-weight: 700;
+  margin-bottom: 0.3em;
+}
+
+.reveal h2 { 
+  font-size: 1.1em; 
+  font-weight: 600;
+  margin-bottom: 0.8em;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.2em;
+  display: inline-block;
+}
+
+.reveal h3 { 
+  font-size: 1em; 
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+
+.reveal h4, .reveal h5, .reveal h6 {
+  font-size: 0.9em;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+
+.reveal ul li { 
+  font-size: 0.9em; 
+  margin-bottom: 0.7em; 
+}
+
+.reveal p { 
+  font-size: 0.9em; 
+  margin-bottom: 1em;
+}
 .regulation-card .card-header h3 { font-size: 1.2em !important; }
 .regulation-card .card-body p { font-size: 0.9em; }
 .fda-approval-slide h2, .ai-regulation-slide h2, .analytics-slide h2, .ai-decision-slide h2 { font-size: 1.5em !important; }
@@ -203,20 +235,6 @@ body {
   color: var(--primary-color);
   text-transform: none;
   letter-spacing: -0.02em;
-}
-
-.reveal h1 {
-  font-size: 2.5em;
-  font-weight: 700;
-}
-
-.reveal h2 {
-  font-size: 1.8em;
-  font-weight: 600;
-  margin-bottom: 0.8em;
-  border-bottom: 2px solid var(--secondary-color);
-  padding-bottom: 0.2em;
-  display: inline-block;
 }
 
 .reveal ul {

@@ -9,17 +9,52 @@
     <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
     <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/white.css">
     
+    <!-- Bootstrap 5 CSS (loading after RevealJS to have higher precedence) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/bootstrap-overrides.css">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/transitions.css">
     <link rel="stylesheet" href="css/backgrounds.css">
-    
     <link rel="stylesheet" href="css/base.css">
-            height: 400px;
-            margin: 1em 0;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            background-color: rgba(255, 255, 255, 0.8);
+    
+    <!-- Integration styles for Bootstrap + RevealJS -->
+    <style>
+        /* Fix for Bootstrap conflicting with RevealJS */
+        .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+            font-family: inherit;
+            text-transform: none;
+            margin-bottom: 0.5rem;
+        }
+        
+        .reveal p {
+            margin-bottom: 1rem;
+        }
+        
+        /* Make Bootstrap components work inside RevealJS */
+        .reveal .slides section .container,
+        .reveal .slides section .container-fluid {
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        /* Make sure Bootstrap cards are visible in slides */
+        .reveal .card {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            position: relative;
+            border: 1px solid rgba(0,0,0,.125);
+            border-radius: 0.25rem;
+        }
+        
+        /* Fix fragment visibility with Bootstrap */
+        .fragment.visible {
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
         }
     </style>
 </head>
@@ -87,67 +122,85 @@
             <section data-transition="convex" class="regulations-slide">
                 <h2>Key External Regulations</h2>
                 
-                <div class="regulations-grid">
-                    <div class="regulation-card fragment fade-in" data-regulation="hipaa">
-                        <div class="card-header hipaa-header">
-                            <h3>HIPAA</h3>
+                <div class="container-fluid px-4 pt-3">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                        <div class="col fragment fade-in" data-regulation="hipaa">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="card-title mb-0">HIPAA</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Patient privacy and data security</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <p>Patient privacy and data security</p>
+                        
+                        <div class="col fragment fade-in" data-regulation="clia">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-header bg-success text-white">
+                                    <h5 class="card-title mb-0">CLIA</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Governs lab testing standards</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="regulation-card fragment fade-in" data-regulation="clia">
-                        <div class="card-header clia-header">
-                            <h3>CLIA</h3>
+                        
+                        <div class="col fragment fade-in" data-regulation="fda">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-header bg-danger text-white">
+                                    <h5 class="card-title mb-0">FDA</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Software as a Medical Device (SaMD)</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <p>Governs lab testing standards</p>
-                        </div>
-                    </div>
-                    
-                    <div class="regulation-card fragment fade-in" data-regulation="fda">
-                        <div class="card-header fda-header">
-                            <h3>FDA</h3>
-                        </div>
-                        <div class="card-body">
-                            <p>Software as a Medical Device (SaMD)</p>
-                        </div>
-                    </div>
-                    
-                    <div class="regulation-card fragment fade-in" data-regulation="cap">
-                        <div class="card-header cap-header">
-                            <h3>CAP & JCAHO</h3>
-                        </div>
-                        <div class="card-body">
-                            <p>Accreditation and compliance</p>
-                        </div>
-                    </div>
-                    
-                    <div class="regulation-card fragment fade-in" data-regulation="nist">
-                        <div class="card-header nist-header">
-                            <h3>NIST</h3>
-                        </div>
-                        <div class="card-body">
-                            <p>Cybersecurity best practices for software</p>
-                        </div>
-                    </div>
-                    
-                    <div class="regulation-card fragment fade-in" data-regulation="insurance">
-                        <div class="card-header insurance-header">
-                            <h3>Insurance</h3>
-                        </div>
-                        <div class="card-body">
-                            <p>Technical requirements for covered institutions</p>
+                        
+                        <div class="col fragment fade-in" data-regulation="cap">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-header bg-warning text-dark">
+                                    <h5 class="card-title mb-0">CAP & JCAHO</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Accreditation and compliance</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="regulation-card fragment fade-in" data-regulation="internal">
-                        <div class="card-header internal-header">
-                            <h3>Internal</h3>
+                    <div class="row row-cols-1 row-cols-md-2 g-4 mt-2">
+                        <div class="col fragment fade-in" data-regulation="nist">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-header bg-info text-white">
+                                    <h5 class="card-title mb-0">NIST</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Cybersecurity best practices for software</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <p>Organizational policies influenced by insurers, consultants, and legal advisors</p>
+                    
+                        <div class="col fragment fade-in" data-regulation="insurance">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-header bg-success bg-opacity-75 text-white">
+                                    <h5 class="card-title mb-0">Insurance</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Reimbursement and reporting rules</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col fragment fade-in" data-regulation="internal">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-header bg-dark text-white">
+                                    <h5 class="card-title mb-0">Internal</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Institutional policies, procedures, and training</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -236,10 +289,15 @@
             </section>
 
             <!-- SLIDE 6C: HIPAA De-identification Methods -->
-            <section data-transition="slide" class="deidentification-slide">
-                <h2>HIPAA De-identification Methods</h2>
-                <div class="deidentification-container">
-                   <div class="methods-container">
+            <section data-transition="slide" class="deidentification-slide bg-light">
+                <div class="container py-4">
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-md-10 text-center">
+                            <h2 class="display-5 mb-4 border-bottom border-primary pb-2 d-inline-block">HIPAA De-identification Methods</h2>
+                        </div>
+                    </div>
+                    
+                    <div class="row g-4">
                         <!-- Safe Harbor Method -->
                         <div class="method-card">
                             <div class="method-header">Safe Harbor Method</div>
@@ -276,15 +334,30 @@
                         </div>
                         
                         <!-- Expert Determination Method -->
-                        <div class="method-card">
-                            <div class="method-header">Expert Determination Method</div>
-                            <div class="method-body">
-                                <p>A qualified expert applies statistical methods to ensure:</p>
-                                <ul>
-                                    <li>Very small risk that data could identify an individual</li>
-                                    <li>Risk assessment based on statistical principles</li>
-                                    <li>Methods and results documented</li>
-                                </ul>
+                        <div class="col-md-6">
+                            <div class="card shadow h-100 border-0 rounded-3">
+                                <div class="card-header bg-info text-white py-3">
+                                    <h3 class="card-title m-0 d-flex align-items-center">
+                                        <i class="bi bi-graph-up me-2"></i> Expert Determination Method
+                                    </h3>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text fw-bold">A qualified expert applies statistical methods to ensure:</p>
+                                    
+                                    <ul class="list-group mb-3">
+                                        <li class="list-group-item d-flex align-items-center">
+                                            <i class="bi bi-bar-chart-line text-info me-3 fs-4"></i>
+                                            <span>Very small risk that data could identify an individual</span>
+                                        </li>
+                                        <li class="list-group-item d-flex align-items-center">
+                                            <i class="bi bi-calculator text-info me-3 fs-4"></i>
+                                            <span>Risk assessment based on statistical principles</span>
+                                        </li>
+                                        <li class="list-group-item d-flex align-items-center">
+                                            <i class="bi bi-file-earmark-text text-info me-3 fs-4"></i>
+                                            <span>Methods and results documented</span>
+                                        </li>
+                                    </ul>
                                 
                                 <div class="data-example" id="expert-data">
                                     <div class="data-field high-risk"><span class="field-name">Name:</span> <span class="field-value">John Smith</span></div>
@@ -631,18 +704,52 @@
 
             <!-- SLIDE 13: Q&A -->
             <section data-transition="fade" class="qa-slide">
-                <h2>Questions & Discussion</h2>
-                <div class="qa-container">
-                    <div class="qa-icon">
-                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#2c3e50" stroke-width="2"/>
-                            <path d="M12 17V17.01" stroke="#2c3e50" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M12 14C12 11 15 11 15 9C15 7.34315 13.6569 6 12 6C10.3431 6 9 7.34315 9 9" stroke="#2c3e50" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <p class="qa-text">Please feel free to ask any questions about the topics covered today.</p>
-                    <div class="contact-info">
-                        <p>For follow-up questions: <strong>peter.gershkovich@yale.edu</strong></p>
+                <div class="container my-4">
+                    <div class="row justify-content-center">
+                        <div class="col-md-10">
+                            <div class="card shadow border-0 rounded-4 mb-4">
+                                <div class="card-header bg-primary text-white py-3">
+                                    <h2 class="h3 text-center mb-0">Questions & Discussion</h2>
+                                </div>
+                                <div class="card-body text-center py-5">
+                                    <div class="mb-4">
+                                        <span class="badge rounded-pill bg-primary p-3 mb-3">
+                                            <i class="bi bi-question-circle-fill fs-4"></i>
+                                        </span>
+                                        <p class="display-6 mb-4">Please feel free to ask any questions</p>
+                                        <p class="lead">We've covered a lot of ground today in pathology informatics</p>
+                                    </div>
+                                    
+                                    <div class="row mt-5 justify-content-center">
+                                        <div class="col-md-8">
+                                            <div class="list-group">
+                                                <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                                                    <i class="bi bi-envelope-fill fs-4 text-primary"></i>
+                                                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
+                                                        <div class="text-start">
+                                                            <h6 class="mb-0">Email</h6>
+                                                            <p class="mb-0 opacity-75">peter.gershkovich@yale.edu</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="list-group-item list-group-item-action d-flex gap-3 py-3">
+                                                    <i class="bi bi-journal-text fs-4 text-primary"></i>
+                                                    <div class="d-flex gap-2 w-100 justify-content-between align-items-center">
+                                                        <div class="text-start">
+                                                            <h6 class="mb-0">Resources</h6>
+                                                            <p class="mb-0 opacity-75">Slide deck available on department website</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-light text-center py-3">
+                                    <p class="mb-0">Thank you for your attention!</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -652,6 +759,10 @@
     <!-- RevealJS Core JS -->
     <script src="node_modules/reveal.js/dist/reveal.js"></script>
     <script src="node_modules/reveal.js/plugin/notes/notes.js"></script>
+    
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/reveal.js/plugin/markdown/markdown.js"></script>
     <script src="node_modules/reveal.js/plugin/highlight/highlight.js"></script>
     

@@ -4,12 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HIPAA Breach Data Visualization</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
   <!-- Load D3.js with integrity check and defer attribute -->
   <script src="https://d3js.org/d3.v7.min.js" integrity="sha384-ggyl1JgU/XXt8DTxAJ9xpJ0IHhh5P85ofLfaGzZ0vUOJQzBAu5QWI/UMBFKVq72+" crossorigin="anonymous"></script>
+  
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/theme.css">
   <link rel="stylesheet" href="css/transitions.css">
   <link rel="stylesheet" href="css/backgrounds.css">
+  
+  <style>
+    .tooltip {
+      opacity: 0;
     }
     
     .error-message {
@@ -516,5 +526,9 @@
       }
     }, {once: true});
   </script>
+  
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
