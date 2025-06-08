@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Development for Clinical Use in Pathology</title>
+
+    <!-- RevealJS Core CSS -->
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/white.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/transitions.css">
+    <link rel="stylesheet" href="css/backgrounds.css">
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- SLIDE 1: Title Slide -->
+            <section data-transition="zoom" class="title-slide">
+                <div class="title-content">
+                    <h1 class="animate-title">Software Development for Clinical Use in Pathology</h1>
+                    <div class="presenter-box animate-presenter">
+                        <p><em>Peter Gershkovich, MD. MHA</em><br>Yale University School of Medicine | June 2025</p>
+                    </div>
+                </div>
+                <div class="slide-background-overlay"></div>
+            </section>
+
+            <!-- SLIDE 2: Introduction -->
+            <section data-transition="fade">
+                <h2>Introduction</h2>
+                <ul class="fragment-list">
+                    <li class="fragment">Why pathology residents should care about software: LIS limitations, workflow inefficiencies, unmet needs.</li>
+                    <li class="fragment">Custom software can improve diagnostics, communication, and safety.</li>
+                    <li class="fragment">Real-world impact: frozen section alerts, digital image management, urgent case triage.</li>
+                </ul>
+            </section>
+
+            <!-- SLIDE 3: Why Build Custom Software? -->
+            <section data-transition="fade">
+                <h2>Why Build Custom Software?</h2>
+                <ul class="fragment-list">
+                    <li class="fragment">Tailored to your lab's needs and workflow — especially important for subspecialty services.</li>
+                    <li class="fragment">Enables integration with external systems (EHRs, image viewers, AI pipelines).</li>
+                    <li class="fragment">Supports innovation and regulatory adaptation (e.g., NGS reporting, frozen sections).</li>
+                    <li class="fragment">From Gershkovich & Sinard: Functionality gaps arise when needed tech exists but isn't in your LIS.</li>
+                </ul>
+            </section>
+
+            <!-- SLIDE 4: Challenges to Be Aware Of -->
+            <section data-transition="fade">
+                <h2>Challenges to Be Aware Of</h2>
+                <ul class="fragment-list">
+                    <li class="fragment">Development effort requires domain understanding.</li>
+                    <li class="fragment">Validation and long-term support must be considered.</li>
+                    <li class="fragment">Institutional inertia: "we're not in the software business" is often a myth.</li>
+                    <li class="fragment">From Sinard & Gershkovich: Even one or two developers with domain knowledge can be effective.</li>
+                </ul>
+            </section>
+
+            <!-- SLIDE 5: Software Lifecycle & DevSecOps in Pathology -->
+            <section data-transition="slide">
+                <h2>Software Lifecycle & DevSecOps in Pathology</h2>
+                <ul class="fragment-list">
+                    <li class="fragment">1. Requirement Gathering – Start with specific use cases from the clinical workflow.</li>
+                    <li class="fragment">2. Functional Specification – What should the system do? Create screen diagrams, button behaviors, exceptions.</li>
+                    <li class="fragment">3. Technical Specification – Database, architecture, and performance planning.</li>
+                    <li class="fragment">4. Implementation and Testing – Use version control, containers (Docker), staging environments.</li>
+                    <li class="fragment">5. Security and Compliance – HIPAA, access logs, secure APIs.</li>
+                    <li class="fragment">6. Deployment & Feedback Loop – Track usage and iterate.</li>
+                </ul>
+            </section>
+
+            <!-- SLIDE 6: DevSecOps Philosophy -->
+            <section data-transition="slide">
+                <h2>DevSecOps Philosophy</h2>
+                <ul class="fragment-list">
+                    <li class="fragment">Secure-by-design.</li>
+                    <li class="fragment">Rapid, adaptive iterations.</li>
+                    <li class="fragment">Infrastructure-as-code and automation.</li>
+                    <li class="fragment">Key point: LIS vendors often cannot move fast enough due to outdated architecture.</li>
+                </ul>
+            </section>
+
+            <!-- SLIDE 7: Image Analysis & AI -->
+            <section data-transition="convex">
+                <h2>Image Analysis & AI</h2>
+                <ul class="fragment-list">
+                    <li class="fragment">QPath – Use Groovy scripts to quantify cell populations, analyze TILs, or export tiles for deep learning.</li>
+                    <li class="fragment">ImageJ/Fiji – Open-source, powerful for smaller ROI and pixel-level analysis.</li>
+                    <li class="fragment">HistomicsTK – Feature extraction and visualization for whole slide images.</li>
+                </ul>
+            </section>
+
+            <!-- SLIDE 8: Digital Pathology Infrastructure -->
+            <section data-transition="convex">
+                <h2>Digital Pathology Infrastructure</h2>
+                <ul class="fragment-list">
+                    <li class="fragment">Digital Slide Archive (DSA) – WSI management with REST APIs.</li>
+                    <li class="fragment">OpenSeadragon – Lightweight JS-based WSI viewer you can embed in web tools.</li>
+                    <li class="fragment">Open Source Repositories – GitHub, SourceForge, MONAI.</li>
+                </ul>
+            </section>
+
+            <!-- SLIDE 9: Clinical Applications -->
+            <section data-transition="convex">
+                <h2>Clinical Applications</h2>
+                <ul class="fragment-list">
+                    <li class="fragment">Alerting systems for STAT/RUSH cases.</li>
+                    <li class="fragment">Specimen tracking and intraoperative diagnosis tools.</li>
+                    <li class="fragment">NGS variant interpretation modules.</li>
+                </ul>
+            </section>
+
+            <!-- SLIDE 10: Spotting Gaps in Workflow -->
+            <section data-transition="fade">
+                <h2>Spotting Gaps in Workflow</h2>
+                <ul class="fragment-list">
+                    <li class="fragment">What is frustrating in your daily workflow? What leads to delays, errors, or repetitive effort?</li>
+                    <li class="fragment">From lecture material: If your LIS doesn't notify you of STAT slides without a resident, that's a gap.</li>
+                </ul>
+            </section>
+
+            <!-- SLIDE 11: Solutions -->
+            <section data-transition="fade">
+                <h2>Solutions</h2>
+                <ul class="fragment-list">
+                    <li class="fragment">7 Options: Ignore, patch manually, switch LIS, request vendor fix, outsource, build yourself, or integrate OSS.</li>
+                    <li class="fragment">Residents can help design or prototype solutions with Jupyter Notebooks, low-code tools.</li>
+                    <li class="fragment">Learn to write or read functional specs to guide developers.</li>
+                </ul>
+            </section>
+
+            <!-- SLIDE 12: Conclusion and Call to Action -->
+            <section data-transition="fade">
+                <h2>Conclusion and Call to Action</h2>
+                <ul class="fragment-list">
+                    <li class="fragment">Pathology informatics is a core discipline – not optional.</li>
+                    <li class="fragment">Custom software development is powerful, cost-effective, and sustainable.</li>
+                    <li class="fragment">You can participate by reporting gaps, helping design use cases, or even coding solutions.</li>
+                    <li class="fragment">Every meaningful tool starts with someone who understood the problem deeply.</li>
+                </ul>
+            </section>
+
+            <!-- SLIDE 13: Q&A and Demo Time -->
+            <section data-transition="zoom">
+                <h2>Q&A and Demo Time</h2>
+                <ul class="fragment-list">
+                    <li class="fragment">Live demo of QPath on an H&E slide.</li>
+                    <li class="fragment">Jupyter notebook using DSA API to pull case info.</li>
+                    <li class="fragment">Discussion: What bugs you the most in your LIS today — and what would you build to fix it?</li>
+                </ul>
+            </section>
+
+            <!-- SLIDE 14: Workflow Augmentation Example -->
+            <section data-transition="fade">
+                <h2>Workflow Augmentation Example</h2>
+                <div class="workflow-example">
+                    <p>Enter text below and press Enter or click Submit. The server will process your input.</p>
+                    <p class="note">Note: Special characters $ and # will trigger an error.</p>
+
+                    <div class="input-container">
+                        <input type="text" id="workflow-input" placeholder="Enter text here..." class="workflow-input">
+                        <button id="workflow-submit" class="workflow-button">Submit</button>
+                    </div>
+
+                    <div id="result-container" class="result-container">
+                        <p id="result-message"></p>
+                        <p id="processed-text"></p>
+                    </div>
+                </div>
+
+                <style>
+                    .workflow-example {
+                        background-color: #f5f5f5;
+                        border-radius: 8px;
+                        padding: 20px;
+                        margin-top: 20px;
+                        text-align: left;
+                    }
+                    .note {
+                        font-style: italic;
+                        color: #666;
+                        font-size: 0.8em;
+                    }
+                    .input-container {
+                        display: flex;
+                        margin: 20px 0;
+                    }
+                    .workflow-input {
+                        flex: 1;
+                        padding: 10px;
+                        font-size: 16px;
+                        border: 1px solid #ddd;
+                        border-radius: 4px 0 0 4px;
+                    }
+                    .workflow-button {
+                        padding: 10px 20px;
+                        background-color: #0066cc;
+                        color: white;
+                        border: none;
+                        border-radius: 0 4px 4px 0;
+                        cursor: pointer;
+                    }
+                    .workflow-button:hover {
+                        background-color: #0055aa;
+                    }
+                    .result-container {
+                        background-color: white;
+                        border: 1px solid #ddd;
+                        border-radius: 4px;
+                        padding: 15px;
+                        min-height: 60px;
+                        margin-top: 20px;
+                    }
+                    #result-message {
+                        font-weight: bold;
+                    }
+                    .success {
+                        color: #28a745;
+                    }
+                    .error {
+                        color: #dc3545;
+                    }
+                </style>
+            </section>
+        </div>
+    </div>
+
+    <!-- RevealJS Core JS -->
+    <script src="node_modules/reveal.js/dist/reveal.js"></script>
+    <script src="node_modules/reveal.js/plugin/notes/notes.js"></script>
+    <script src="node_modules/reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/definitions.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/sounds.js"></script>
+
+    <script>
+        // Initialize RevealJS
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+            transition: 'slide',
+            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+        });
+
+        // Workflow example functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const input = document.getElementById('workflow-input');
+            const submitButton = document.getElementById('workflow-submit');
+            const resultMessage = document.getElementById('result-message');
+            const processedText = document.getElementById('processed-text');
+
+            // Function to process the input
+            async function processInput(text) {
+                try {
+                    const response = await fetch('/api/process-text', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ text })
+                    });
+
+                    const data = await response.json();
+
+                    // Display the result
+                    if (data.success) {
+                        resultMessage.textContent = 'Success: ' + data.message;
+                        resultMessage.className = 'success';
+                        playSuccessSound();
+                    } else {
+                        resultMessage.textContent = 'Error: ' + data.message;
+                        resultMessage.className = 'error';
+                        playErrorSound();
+                    }
+
+                    processedText.textContent = 'Processed text: ' + data.processedText;
+
+                } catch (error) {
+                    resultMessage.textContent = 'Error: ' + error.message;
+                    resultMessage.className = 'error';
+                    playErrorSound();
+                }
+            }
+
+            // Event listener for submit button
+            submitButton.addEventListener('click', function() {
+                processInput(input.value);
+            });
+
+            // Event listener for Enter key
+            input.addEventListener('keypress', function(event) {
+                if (event.key === 'Enter') {
+                    processInput(input.value);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
