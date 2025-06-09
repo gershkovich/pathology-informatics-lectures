@@ -4,16 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Software Development for Clinical Use in Pathology</title>
-
+    
     <!-- RevealJS Core CSS -->
     <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
     <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/white.css">
-
+    
+    <!-- Bootstrap 5 CSS (loading after RevealJS to have higher precedence) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/bootstrap-overrides.css">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/transitions.css">
     <link rel="stylesheet" href="css/backgrounds.css">
     <link rel="stylesheet" href="css/base.css">
+    
+    <!-- Integration styles for Bootstrap + RevealJS -->
+    <style>
+        /* Fix for Bootstrap conflicting with RevealJS */
+        .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+            font-family: inherit;
+            text-transform: none;
+            margin-bottom: 0.5rem;
+        }
+        
+        .reveal p {
+            margin-bottom: 1rem;
+        }
+        
+        /* Make Bootstrap components work inside RevealJS */
+        .reveal .slides section .container,
+        .reveal .slides section .container-fluid {
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        /* Make sure Bootstrap cards are visible in slides */
+        .reveal .card {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            position: relative;
+            border: 1px solid rgba(0,0,0,.125);
+            border-radius: 0.25rem;
+        }
+        
+        /* Fix fragment visibility with Bootstrap */
+        .fragment.visible {
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+    </style>
 </head>
 <body>
     <div class="reveal">
@@ -235,19 +278,38 @@
     <script src="node_modules/reveal.js/plugin/notes/notes.js"></script>
     <script src="node_modules/reveal.js/plugin/markdown/markdown.js"></script>
     <script src="node_modules/reveal.js/plugin/highlight/highlight.js"></script>
-
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
     <!-- Custom JS -->
     <script src="js/definitions.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/sounds.js"></script>
-
+    
     <script>
         // Initialize RevealJS
         Reveal.initialize({
+            // Presentation settings
+            width: 1200,
+            height: 700,
+            margin: 0.1,
+            minScale: 0.2,
+            maxScale: 2.0,
+            
+            // Display settings
+            controls: true,
+            progress: true,
+            center: true,
             hash: true,
-            slideNumber: true,
-            transition: 'slide',
-            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+            
+            // Transition settings
+            transition: 'slide', // Default transition
+            transitionSpeed: 'default',
+            backgroundTransition: 'fade',
+            
+            // Plugins
+            plugins: [RevealNotes, RevealMarkdown, RevealHighlight]
         });
 
         // Workflow example functionality
