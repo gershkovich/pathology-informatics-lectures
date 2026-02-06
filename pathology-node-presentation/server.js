@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 // Middleware for parsing JSON and form data
 app.use(express.json());
@@ -13,9 +13,9 @@ app.use(express.static(__dirname));
 // Serve node_modules files
 app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')));
 
-// Route for the home page
+// Landing page — lecture selector
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'home.html'));
 });
 
 // Route for JSON-driven lectures (friendly URL → lecture.html with query param)
