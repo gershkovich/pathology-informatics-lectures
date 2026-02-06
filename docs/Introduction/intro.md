@@ -1,4 +1,4 @@
-# Pathology Informatics for Residents: Logic, Workflow, and the Future of Practice
+# Relevance of Pathology Informatics: Logic, Workflow, and the Future of Practice
 **Format:** 35–40 slides (this outline uses **38 slides**)  
 **Audience:** Pathology residents (PGY1–PGY4)  
 **Core thesis:** Informatics is primarily **logical** (workflow + data + decision + governance) rather than purely technical. Automation should **amplify clinical work**, not coerce clinicians into generic workflows.
@@ -29,7 +29,7 @@ Use any combo of:
 ## 1) Opening and framing (Slides 1–6)
 
 ### Slide 1 — Title + promise
-**Title:** *Pathology Informatics for Residents: Logic, Workflow, and the Future of Practice*  
+**Title:** *Relevance of Pathology Informatics: Logic, Workflow, and the Future of Practice*  
 **One-line promise:** “You will practice pathology inside software—so you must understand the logic that shapes it.”  
 **Quick opener:** “Show of hands: who has blamed the LIS for something this week?”
 

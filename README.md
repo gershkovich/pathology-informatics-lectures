@@ -10,7 +10,7 @@ Interactive web-based lectures for pathology residents, built with Reveal.js, D3
 | --- | ----- | ---- |
 | 1 | Regulations, Technology, and the Future of Pathology | [Outline](docs/updated_outline.md) · [PRD](docs/PRD.md) |
 | 2 | Software Development for Clinical Use in Pathology | [Outline](docs/software_dev_clinical_outline.md) · [Overview](docs/software_dev_clinical_use.md) |
-| 3 | Pathology Informatics for Residents *(interactive, JSON-driven)* | [Outline](docs/Introduction/intro.md) |
+| 3 | Relevance of Pathology Informatics *(interactive, JSON-driven)* | [Outline](docs/Introduction/intro.md) |
 
 ## Quick Start
 
