@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Serve static files from the current directory
-app.use(express.static(__dirname));
+app.use(express.static(__dirname, { index: false }));
 
 // Serve node_modules files
 app.use('/node_modules', express.static(path.join(__dirname, 'node_modules')));
