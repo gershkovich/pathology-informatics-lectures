@@ -18,6 +18,11 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+// Route for JSON-driven lectures (friendly URL → lecture.html with query param)
+app.get('/lecture/:name', (req, res) => {
+  res.redirect('/lecture.html?lecture=' + encodeURIComponent(req.params.name));
+});
+
 // API endpoint for processing text input
 app.post('/api/process-text', (req, res) => {
   const { text } = req.body;

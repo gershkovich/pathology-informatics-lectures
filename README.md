@@ -1,49 +1,60 @@
-# pathology-informatics-lectures
+# Pathology Informatics Lectures
 
-Lectures in Pathology Informatics for Residents
+Interactive web-based lectures for pathology residents, built with Reveal.js, D3.js, and a custom JSON-driven slide engine.
+
+**Author:** Peter Gershkovich, MD. MHA — Yale University School of Medicine
 
 ## Available Lectures
 
-1. **Regulations, Technology, and the Future of Pathology: What Every Pathology Resident Should Know About LIS and IMS**
-   - [Documentation](/docs/updated_outline.md)
-   - [HTML Presentation](/pathology-node-presentation/index.html)
+| # | Title | Docs | Presentation |
+| --- | ----- | ---- | ------------ |
+| 1 | Regulations, Technology, and the Future of Pathology | [Outline](docs/updated_outline.md) · [PRD](docs/PRD.md) | `index.html` |
+| 2 | Software Development for Clinical Use in Pathology | [Outline](docs/software_dev_clinical_outline.md) · [Overview](docs/software_dev_clinical_use.md) | `software_dev_clinical_use.html` |
+| 3 | Pathology Informatics for Residents *(JSON-driven)* | [Outline](docs/Introduction/intro.md) | `lecture.html?lecture=intro_pathology_informatics` |
 
-2. **Software Development for Clinical Use in Pathology**
-   - [Documentation](/docs/software_dev_clinical_use.md)
-   - [HTML Presentation](/pathology-node-presentation/software_dev_clinical_use.html)
+## Quick Start
 
-## Running the Presentations
+```bash
+cd pathology-node-presentation
+npm install
+node server.js
+```
 
-### Web-based Presentations (Recommended)
+Then open:
 
-1. Navigate to the presentation directory:
-   ```
-   cd pathology-node-presentation
-   ```
+- **Lecture 1:** <http://localhost:8000/index.html>
+- **Lecture 2:** <http://localhost:8000/software_dev_clinical_use.html>
+- **Lecture 3:** <http://localhost:8000/lecture/intro_pathology_informatics>
 
-2. Install dependencies (if not already installed):
-   ```
-   npm install
-   ```
+## Project Structure
 
-3. Start the presentation server:
-   ```
-   node server.js
-   ```
+```text
+pathology-informatics-lectures/
+├── docs/                          # Lecture outlines and documentation
+├── data/                          # Raw data files (breach CSV)
+├── ppt_gen/                       # Python scripts for PowerPoint generation
+└── pathology-node-presentation/   # Main web application
+    ├── server.js                  # Express server
+    ├── index.html                 # Lecture 1 (self-contained)
+    ├── software_dev_clinical_use.html  # Lecture 2
+    ├── lecture.html               # Generic shell for JSON-driven lectures
+    ├── css/                       # Stylesheets (theme, base, intro)
+    ├── js/                        # Slide engine, visualizations, widgets
+    └── data/lectures/             # JSON lecture definitions
+```
 
-4. Open a web browser and navigate to:
-   - For Lecture 1: `http://localhost:8000/index.html`
-   - For Lecture 2: `http://localhost:8000/software_dev_clinical_use.html`
+## JSON-Driven Lecture System
 
-### PowerPoint Presentations
+Lecture 3+ uses a modular architecture:
 
-See the documentation for each lecture for instructions on generating PowerPoint presentations.
+- **`data/lectures/*.json`** — slide content and structure
+- **`js/slide-engine.js`** — renders slides from JSON into Reveal.js sections
+- **`js/viz-library.js`** — D3.js visualizations (workflow pipeline, abstraction layers, etc.)
+- **`js/widgets.js`** — interactive polls, micro-case voting, timers
+
+To create a new lecture, add a JSON file to `data/lectures/` and open `lecture.html?lecture=<name>`.
 
 ## License
 
-- All content (slides, text, and teaching materials) is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
-- Any code in this repository is licensed under the [MIT License](LICENSE).
-
-## Acknowledgments
-
-- Peter Gershkovich, MD. MHA - Yale University School of Medicine
+- **Content** (slides, text, teaching materials): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- **Code**: [MIT License](LICENSE)
